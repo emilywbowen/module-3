@@ -1,4 +1,4 @@
-[
+export default [
     {
         "title": "Man must explore, and this is exploration at its greatest",
         "subTitle": "Problems look mighty small from 150 miles up",
