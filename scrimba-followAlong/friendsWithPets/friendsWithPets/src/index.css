@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,6 +12,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  background-color: rgb(9, 132, 132);
 }
 
 a {
@@ -25,17 +29,33 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display:inline-flex;
   place-items: center;
+  background-color: rgb(133, 221, 221);
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: x-large;
   line-height: 1.1;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(151, 107, 157);
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(99, 7, 7)
 }
+
+h2{
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(119, 81, 9) 
+}
+
+h3{
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 button {
   border-radius: 8px;
