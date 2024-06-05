@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Color from './components/Color.jsx'
+// import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
+// import Color from './components/Color.jsx'
 import './index.css'
+import App from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-  <Color />
-  </React.StrictMode>,
-)
+
+ReactDOM.render(<App />, document.getElementById('root'));

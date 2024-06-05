@@ -1,4 +1,5 @@
 import React from "react"
+import "./color.css"
 
 export default function Color() {
     const [colorData, setColorData] = React.useState({
@@ -18,15 +19,9 @@ export default function Color() {
     }, [])
 
     function getNewColor(){
-        // const randomNumber = Math.floor(Math.random() * color.length)
-        // const url = color[randomNumber].url
         fetch(randomColor)
         .then(res => res.json())
         .then(data => setColor(data))
-        // setColorData(prevColor => ({
-        //     ...prevColor,
-        //     randomColor: url
-        // }))
     }
     
     function handleChange(event) {
@@ -38,12 +33,12 @@ export default function Color() {
     }
 
     return (
-      <div style={{backgroundColor: `${color.hex}`}}>
+      <div className= "verticalHeight" style={{backgroundColor: `${color.hex}`}}>
         <img src={getNewColor.randomColor}/>
         <h2>Your color is</h2>
         <button onClick = {getNewColor}>Get New Color</button>
         <pre>{JSON.stringify(color.name, null, 2)}</pre>
-        <background src = {color}/>
+        {/* <background src = {color}/> */}
         {/* <pre>{JSON.stringify(color.name, null, 2)</pre> */}
       </div>
     )
