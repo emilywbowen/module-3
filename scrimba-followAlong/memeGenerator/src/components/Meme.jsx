@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
+import axios from "axios";
+
 
 export default function Meme() {
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "https://pngimg.com/uploads/trollface/trollface_PNG42.png"
+        randomImage: "http://i.imgflip.com/1bij.jpg"
     })
     const [allMemes, setAllMemes] = React.useState([])
 
     React.useEffect(() => {
-        fetch("https://api.imgflip.com/get_memes")
-        .then(res => res.json())
-        .then(data => setAllMemes(data.data.memes))
-    }, [])
+        axios.get("https://api.imgflip.com/get_memes")
+        .then((response) => {
+        // console.log(response.data.data.memes)
+        setAllMemes(response.data.data.memes)
+        })
+        .catch((error)=> {
+        console.log(error);
+        })
+    }, []);
+
+    console.log(allMemes)
 
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
@@ -62,7 +71,7 @@ export default function Meme() {
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image"/>
                 <h2 className="meme--text top">{meme.topText}</h2>
-                <h2 className="meme -- text bottom">{meme.bottomText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
         </main>
     )
