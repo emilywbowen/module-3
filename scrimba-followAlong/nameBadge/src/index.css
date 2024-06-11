@@ -1,0 +1,29 @@
+.input-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(68, 9, 116);
+  background-color: plum;
+}
+
+input::placeholder{
+  color:rgb(184, 7, 7)
+}
+textarea::placeholder{
+  color:rgb(184, 7, 7)
+}
+
+.saved-data-container {
+  padding: 10px; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.saved-entry {
+  border: 1px solid #ccc;
+  padding: 10px; 
+  background-color: rgb(24, 118, 118);
+}
